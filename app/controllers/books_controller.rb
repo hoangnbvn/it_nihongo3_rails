@@ -7,9 +7,10 @@ class BooksController < ApplicationController
   end
 
   # GET /books/1 or /books/1.json
-  def show
-  end
 
+    def show
+         @book_review = BookReview.new
+    end
   # GET /books/new
   def new
     @book = Book.new
@@ -47,6 +48,8 @@ class BooksController < ApplicationController
     end
   end
 
+
+  
   # DELETE /books/1 or /books/1.json
   def destroy
     @book.destroy
